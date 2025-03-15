@@ -1,5 +1,5 @@
 import react from "react";  
-import { LoginBox, LoginDrop, Login, LoginContent, LoginTitle, InputBox, Input, Button } from "./smaple.styles";
+import { LoginBox, LoginDrop, Login, LoginContent, LoginTitle, InputBox, Input, Button } from "./loginPage.styles";
 
 const sample = () => {
   return (
