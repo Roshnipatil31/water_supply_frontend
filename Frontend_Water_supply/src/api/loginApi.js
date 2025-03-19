@@ -1,16 +1,16 @@
 import api from "../config/axiosConfig";
 
 const loginApi = {
-//   loginVendor: async (phone, password) => {
-//     try {
-//       const response = await api.post("/vendors/login", { phone, password });
-//       console.log(response);
-//       return response.data;
-//     } catch (error) {
-//       console.error("Login error:", error);
-//       throw new Error(error.response?.data?.message || "Login failed. Please try again.");
-//     }
-//   },
+  loginVendor: async (phone, password) => {
+    try {
+      const response = await api.post("/vendors/login", { phone, password });
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      console.error("Login error:", error);
+      throw new Error(error.response?.data?.message || "Login failed. Please try again.");
+    }
+  },
 
   loginAdmin: async (phone, password) => {
     try {
@@ -22,6 +22,17 @@ const loginApi = {
       throw new Error(error.response?.data?.message || "Login failed. Please try again.");
     }
   },
+
+signupVendor: async (name, phone, password) => {
+  try {
+    const response = await api.post("/vendors/signup", { name, phone, password });
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error("Registration error:", error);
+    throw new Error(error.response?.data?.message || "Registration failed. Please try again.");
+  }
+},
 };
 
 export default loginApi;
